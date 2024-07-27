@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .app {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .retreat-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .retreat {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .retreat img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .filter, .search {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .filter input, .filter select, .filter button, .search input {
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  
+
+ 
+.date-filter-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto; 
+    max-width: 600px; 
+  }
+  
+ 
+  .date-filter-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box; 
+    outline: none;
+  }
+  
+ 
+  .date-filter-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    background-color: #fff; 
+    padding: 0 4px;
+  }
+  
+  
+  .date-filter-input:focus + .date-filter-label,
+  .date-filter-input:not(:placeholder-shown) + .date-filter-label {
+    top: -8px;
+    left: 8px;
+    font-size: 12px;
+    color: #333;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  .date-filter-label.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+
+  @media (max-width: 768px) {
+    .date-filter-wrapper {
+      flex-direction: column; 
+      align-items: stretch;
+      position: static;
+      margin: 0; 
+    }
+  
+    .date-filter-input {
+      margin-bottom: 10px; 
+    }
+  
+    .date-filter-label {
+      left: 12px;
+      font-size: 14px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .date-filter-input {
+      font-size: 14px; 
+      padding: 8px; 
+    }
+  
+    .date-filter-label {
+      font-size: 12px; 
+      padding: 0 2px; 
+    }
+  }
+  
+
+  /* Search.css */
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  
+  .search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px; 
+    font-size: 16px;
+    outline: none; 
+    transition: border-color 0.3s ease; 
+  }
+  
+  
+  .search input:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); 
+  }
+  
+ 
+  @media (max-width: 600px) {
+    .search {
+      padding: 10px;
+    }
+  
+    .search input {
+      font-size: 14px; 
+    }
+  }
+
+  /* Header.css*/
+
+
+.header {
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  .header h1 {
+    font-size: 2.5rem; 
+    color: #333; 
+    margin: 0; 
+    font-weight: 700; 
+    letter-spacing: 1px; 
+  }
+  
+  
+  @media (max-width: 600px) {
+    .header h1 {
+      font-size: 2rem; 
+    }
+  }
+
+  
+  /* Pagination.css */
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 8px; 
+  }
+  
+ 
+  .pagination button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+ 
+  .pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+ 
+  .pagination button:hover:not(.active) {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
+  
+  .pagination button:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    border-color: #ddd;
+    color: #aaa;
+  }
+  
+  @media (max-width: 600px) {
+    .pagination {
+      padding: 15px;
+      gap: 6px; 
+    }
+  
+    .pagination button {
+      padding: 8px 12px;
+      font-size: 14px; 
+    }
+  }
+  

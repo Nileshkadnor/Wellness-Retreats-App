@@ -1,0 +1,31 @@
+.date-filter-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .date-filter-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .date-filter-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    background-color: #fff; 
+    padding: 0 4px; 
+  }
+  
+  .date-filter-label.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
