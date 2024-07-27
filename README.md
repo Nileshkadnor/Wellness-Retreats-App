@@ -13,3 +13,4 @@ how to run application
 2. open terminal
 3. 1st command :- cd Wellness-Retreats
 4. 2 nd command := npm run dev//npm start
+5. click localhost link and open
